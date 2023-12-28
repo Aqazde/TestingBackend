@@ -24,9 +24,8 @@ app.post('/signup', async (req, res) => {
         const query = 'INSERT INTO users (email, password_hash) VALUES ($1, $2) RETURNING *';
         const values = [email, hashedPassword];
         const newUser = await pool.query(query, values);
-        console.log('User created:', newUser.rows[0]); // Log newly created user details
+        console.log('User created:', newUser.rows[0]);
         res.send('<script>alert("User created successfully!"); window.location.href="/";</script>');
-        // Redirect to the homepage ("/") after successful signup
     } catch (error) {
         console.error('Error creating user:', error);
         res.status(500).send('Error creating user: ' + error.message);
@@ -48,7 +47,7 @@ app.post('/login', async (req, res) => {
             return res.status(401).send('Invalid password');
         }
 
-        res.redirect('https://moodle.astanait.edu.kz/login/index.php'); // Redirect to UserProfile.html after successful login
+        res.redirect('https://moodle.astanait.edu.kz/login/index.php');
     } catch (error) {
         console.error('Error logging in:', error);
         res.status(500).send('Error logging in');
