@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatApplication</title>
+    <link rel="stylesheet" href="ChatStyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+<!-- Main container -->
+<div class="container">
+    <!-- msg-header section starts -->
+    <div class="msg-header">
+        <div class="container1">
+            <img src="user1.png" class="msgimg" />
+            <div class="active">
+                <p>User name</p>
+            </div>
+        </div>
+    </div>
+    <!-- msg-header section ends -->
+
+    <!-- Chat inbox  -->
+    <div class="chat-page">
+        <div class="msg-inbox">
+                <!-- Message container -->
+            <div class="chats">
+                <div id="messages" class="msg-page"></div>
+                <!-- Incoming messages -->
+                <div class="received-chats">
+                    <div class="received-msg">
+
+                    </div>
+                </div>
+
+                <!-- Outgoing messages -->
+                <div class="outgoing-chats">
+                    <div class="outgoing-msg">
+                        <div class="outgoing-chats-msg">
+
+                        </div>
+                    </div>
+                </div>
+                    <div class="received-chats">
+                        <div class="received-msg">
+                            <div class="received-msg-inbox">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="outgoing-chats">
+                        <div class="outgoing-msg">
+                            <div class="outgoing-chats-msg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        <!-- msg-bottom section -->
+        <div class="msg-bottom">
+            <form id="messageForm">
+                <div class="input-group">
+                    <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Write message..."
+                            id="messageInput"
+                    />
+                    <button type="submit" class="input-group-text send-icon">
+                        <i class="bi bi-send"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Include Bootstrap icons and font-awesome -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/dist/js/bootstrap-icons.js"></script>
+<script src="chat.js"></script>
+</body>
+</html>
